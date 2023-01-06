@@ -1,11 +1,40 @@
 import React from 'react';
+import { getRandomPhoto } from '../data/api';
+import Image from 'next/image';
 
-const ssg = () => {
+const SSG = ({ photo }) => {
     return (
         <div>
-            SSG
+            <h1>{photo.title}</h1>
+            <Image
+                src={photo.url + '.png'}
+                alt={photo.title}
+                width={500}
+                height={500}
+                priority />
         </div>
     );
 };
 
-export default ssg;
+export async function getStaticProps() {
+    let photo;
+    try {
+        photo = await getRandomPhoto();
+    } catch (error) {
+        return {
+            notFound: true
+        }
+    }
+    if (!photo) {
+        return {
+            notFound: true
+        }; ``
+    }
+    return {
+        props: {
+            photo
+        }
+    };
+}
+
+export default SSG;
