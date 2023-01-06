@@ -15,4 +15,4 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 You can start editing the page by modifying `pages/ssr.js, ssg.js `. The page auto-updates as you edit the file.
 The pager y folder is modified. added the two files `pages/ssr.js, ssg.js` , added the `data` folder
 
-To navigate as follows [http://localhost:3000/ssr] (http://localhost:3000/ssr), [http://localhost:3000/ssg] (http://localhost:3000/ ssg)
+To navigate as follows [http://localhost:3000/ssr](http://localhost:3000/ssr), [http://localhost:3000/ssg](http://localhost:3000/ssg)
